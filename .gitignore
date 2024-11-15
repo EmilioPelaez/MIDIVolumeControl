@@ -67,3 +67,4 @@ fastlane/screenshots
 /Project/fastlane/report.xml
 /Project/fastlane/screenshots/screenshots.html
 Project/fastlane/screenshots/en-US/*.png
+*.xcworkspacedata
