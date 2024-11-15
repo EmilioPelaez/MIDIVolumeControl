@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C8EA84D42CE6CAEB00B0F2C4 /* MIDIVolumeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDIVolumeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = MIDIVolumeControl;
 			packageProductDependencies = (
+				C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */,
 			);
 			productName = MIDIVolumeControl;
 			productReference = C8EA84D42CE6CAEB00B0F2C4 /* MIDIVolumeControl.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = C8EA84CB2CE6CAEB00B0F2C4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C8EA84D52CE6CAEB00B0F2C4 /* Products */;
 			projectDirPath = "";
@@ -319,6 +328,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/InerziaSoft/ISSoundAdditions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */;
+			productName = ISSoundAdditions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8EA84CC2CE6CAEB00B0F2C4 /* Project object */;
 }
