@@ -5,6 +5,8 @@
 //  Created by Emilio Peláez on 16/11/24.
 //
 
+import CGMath
+import Foundation
 import ISSoundAdditions
 import SnoizeMIDI
 
@@ -41,6 +43,11 @@ class VolumeController {
 	}
 	
 	func convertValue(_ value: Int) -> Float {
-		fatalError()
+		let min = Float(configuration.minValue + configuration.deadZone)
+		let max = Float(configuration.maxValue - configuration.deadZone)
+		guard min < max else { return 0 }
+		let remapped = Float(value).remap(from: (min, max), to: (0, 1))
+		let clamped = remapped.clamped()
+		return clamped
 	}
 }

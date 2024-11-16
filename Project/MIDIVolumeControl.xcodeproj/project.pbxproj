@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C85F02DD2CE8EBAF00479356 /* SnoizeMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; };
 		C85F02DE2CE8EBAF00479356 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C85F02F02CE9157D00479356 /* CGMath in Frameworks */ = {isa = PBXBuildFile; productRef = C85F02EF2CE9157D00479356 /* CGMath */; };
 		C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85F02F02CE9157D00479356 /* CGMath in Frameworks */,
 				C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */,
 				C85F02DD2CE8EBAF00479356 /* SnoizeMIDI.framework in Frameworks */,
 			);
@@ -139,6 +141,7 @@
 			name = MIDIVolumeControl;
 			packageProductDependencies = (
 				C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */,
+				C85F02EF2CE9157D00479356 /* CGMath */,
 			);
 			productName = MIDIVolumeControl;
 			productReference = C8EA84D42CE6CAEB00B0F2C4 /* MIDIVolumeControl.app */;
@@ -170,6 +173,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
+				C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C8EA84D52CE6CAEB00B0F2C4 /* Products */;
@@ -420,6 +424,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EmilioPelaez/CGMath";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
 		C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/InerziaSoft/ISSoundAdditions";
@@ -431,6 +443,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C85F02EF2CE9157D00479356 /* CGMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */;
+			productName = CGMath;
+		};
 		C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */;
