@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C85F02DD2CE8EBAF00479356 /* SnoizeMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; };
+		C85F02DE2CE8EBAF00479356 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */; };
-		C8EA85642CE6CF1600B0F2C4 /* SnoizeMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA85622CE6CF0700B0F2C4 /* SnoizeMIDI.framework */; };
-		C8EA85652CE6CF1600B0F2C4 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA85622CE6CF0700B0F2C4 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C8EA85612CE6CF0700B0F2C4 /* PBXContainerItemProxy */ = {
+		C85F02D52CE8EAD300479356 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C8EA85232CE6CF0700B0F2C4 /* SnoizeMIDI.xcodeproj */;
+			containerPortal = C85F02C32CE8EAC400479356 /* SnoizeMIDI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = SnoizeMIDI;
@@ -23,13 +23,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C8EA85662CE6CF1600B0F2C4 /* Embed Frameworks */ = {
+		C85F02DF2CE8EBAF00479356 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C8EA85652CE6CF1600B0F2C4 /* SnoizeMIDI.framework in Embed Frameworks */,
+				C85F02DE2CE8EBAF00479356 /* SnoizeMIDI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C85F02C32CE8EAC400479356 /* SnoizeMIDI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SnoizeMIDI.xcodeproj; sourceTree = "<group>"; };
 		C8EA84D42CE6CAEB00B0F2C4 /* MIDIVolumeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDIVolumeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EA85232CE6CF0700B0F2C4 /* SnoizeMIDI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SnoizeMIDI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,13 +62,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */,
-				C8EA85642CE6CF1600B0F2C4 /* SnoizeMIDI.framework in Frameworks */,
+				C85F02DD2CE8EBAF00479356 /* SnoizeMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C85F02CD2CE8EAC400479356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C8EA84CB2CE6CAEB00B0F2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +106,6 @@
 		C8EA852E2CE6CF0700B0F2C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA85622CE6CF0700B0F2C4 /* SnoizeMIDI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,7 +127,7 @@
 				C8EA84D02CE6CAEB00B0F2C4 /* Sources */,
 				C8EA84D12CE6CAEB00B0F2C4 /* Frameworks */,
 				C8EA84D22CE6CAEB00B0F2C4 /* Resources */,
-				C8EA85662CE6CF1600B0F2C4 /* Embed Frameworks */,
+				C85F02DF2CE8EBAF00479356 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +176,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = C85F02CD2CE8EAC400479356 /* Products */;
+					ProjectRef = C85F02C32CE8EAC400479356 /* SnoizeMIDI.xcodeproj */;
+				},
+				{
 					ProductGroup = C8EA852E2CE6CF0700B0F2C4 /* Products */;
 					ProjectRef = C8EA85232CE6CF0700B0F2C4 /* SnoizeMIDI.xcodeproj */;
 				},
@@ -180,11 +192,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C8EA85622CE6CF0700B0F2C4 /* SnoizeMIDI.framework */ = {
+		C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SnoizeMIDI.framework;
-			remoteRef = C8EA85612CE6CF0700B0F2C4 /* PBXContainerItemProxy */;
+			remoteRef = C85F02D52CE8EAD300479356 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -342,6 +354,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +382,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
