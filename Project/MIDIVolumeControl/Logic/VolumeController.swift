@@ -11,8 +11,17 @@ import SnoizeMIDI
 @Observable
 class VolumeController {
 	
-	var configuration: Configuration = .init()
+	let defaults: UserDefaults
 	
-	init() {}
+	var configuration: Configuration {
+		didSet {
+			configuration.persist(to: defaults)
+		}
+	}
+	
+	init(defaults: UserDefaults = .standard) {
+		self.defaults = defaults
+		self.configuration = .init(from: defaults)
+	}
 	
 }
