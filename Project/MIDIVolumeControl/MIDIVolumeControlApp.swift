@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct MIDIVolumeControlApp: App {
+	@State var controller = VolumeController()
+	
 	var body: some Scene {
-		WindowGroup {
-			ContentView()
+		MenuBarExtra("MIDI Volume", systemImage: "slider.horizontal.2.square") {
+			ConfigurationEditor(configuration: $controller.configuration)
 		}
+		.menuBarExtraStyle(.window)
+		
+		
+//		WindowGroup {
+//			ContentView()
+//		}
 	}
 }
