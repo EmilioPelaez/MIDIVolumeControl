@@ -9,6 +9,7 @@ import SwiftUI
 
 public struct ConfigurationEditor: View {
 	@Binding var configuration: VolumeController.Configuration
+	@State var configurationExpanded = false
 	
 	public var body: some View {
 //		Form {
@@ -16,7 +17,7 @@ public struct ConfigurationEditor: View {
 			Section("MIDI Volume Control") {
 				Toggle("Enabled", isOn: $configuration.enabled)
 			}
-			Section("Configuration") {
+			Section("Configuration", isExpanded: $configurationExpanded) {
 				Stepper(value: $configuration.minValue) {
 					LabeledContent("Min", value: "\(configuration.minValue)")
 				}
