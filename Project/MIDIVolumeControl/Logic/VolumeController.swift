@@ -54,8 +54,9 @@ class VolumeController {
 	}
 	
 	func convertValue(_ value: Int) -> Float {
-		let min = Float(configuration.minValue + configuration.deadZone)
-		let max = Float(configuration.maxValue - configuration.deadZone)
+		let deadZone = Float(configuration.deadZone)
+		let min = deadZone
+		let max = 127 - deadZone
 		guard min < max else { return 0 }
 		let remapped = Float(value).remap(from: (min, max), to: (0, 1))
 		let clamped = remapped.clamped()

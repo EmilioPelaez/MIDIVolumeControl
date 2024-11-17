@@ -15,11 +15,5 @@ struct MIDIVolumeControlApp: App {
 		MenuBarExtra("MIDI Volume", systemImage: "slider.horizontal.2.square") {
 			ConfigurationEditor(configuration: $controller.configuration)
 		}
-		.menuBarExtraStyle(.window)
-		
-		
-//		WindowGroup {
-//			ContentView()
-//		}
 	}
 }

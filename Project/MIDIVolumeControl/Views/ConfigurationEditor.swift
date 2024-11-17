@@ -9,34 +9,18 @@ import SwiftUI
 
 public struct ConfigurationEditor: View {
 	@Binding var configuration: VolumeController.Configuration
-	@State var configurationExpanded = false
 	
 	public var body: some View {
-//		Form {
-		List {
-			Section("MIDI Volume Control") {
-				Toggle("Enabled", isOn: $configuration.enabled)
-			}
-			Section("Configuration", isExpanded: $configurationExpanded) {
-				Stepper(value: $configuration.minValue) {
-					LabeledContent("Min", value: "\(configuration.minValue)")
-				}
-				Stepper(value: $configuration.maxValue) {
-					LabeledContent("Max", value: "\(configuration.maxValue)")
-				}
-				Stepper(value: $configuration.deadZone) {
-					LabeledContent("Dead Zone", value: "\(configuration.deadZone)")
-				}
-			}
-			.labeledContentStyle(.horizontal)
-			
-			Button("Quit") {
-				NSApplication.shared.terminate(nil)
-			}
-			.keyboardShortcut("q")
+		Section("MIDI Volume Control") {
+			Toggle("Enabled", isOn: $configuration.enabled)
 		}
-		.formStyle(.grouped)
-		.listStyle(.sidebar)
+		Section("Configuration") {
+			Stepper("Dead Zone: \(configuration.deadZone)", value: $configuration.deadZone, step: 3)
+		}
+		Button("Quit") {
+			NSApplication.shared.terminate(nil)
+		}
+		.keyboardShortcut("q")
 	}
 }
 
