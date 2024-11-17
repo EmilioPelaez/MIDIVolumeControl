@@ -13,17 +13,15 @@ class MIDIReceiver: NSObject {
 	let context: MIDIContext
 	let portStream: PortInputStream
 	
+	var continuation: AsyncStream<Int>.Continuation?
+	
 	var availableSources: Set<InputStreamSource> {
 		portStream.inputSourcesSet
 	}
 	
 	var selectedSource: InputStreamSource? {
-		get {
-			portStream.selectedInputSources.first
-		}
-		set {
-			portStream.selectedInputSources = Set([newValue].compactMap { $0 })
-		}
+		get { portStream.selectedInputSources.first }
+		set { portStream.selectedInputSources = Set([newValue].compactMap { $0 }) }
 	}
 	
 	override init() {
@@ -37,6 +35,19 @@ class MIDIReceiver: NSObject {
 		portStream.messageDestination = self
 		
 		selectedSource = portStream.inputSources.first
+	}
+	
+	var values: AsyncStream<Int> {
+		continuation?.finish()
+		return .init { continuation in
+			self.continuation = continuation
+		}
+	}
+	
+	func process(_ message: Message) -> Int? {
+		guard let message = message as? VoiceMessage else { return nil }
+		guard message.messageType == .control else { return nil }
+		return Int(message.dataByte2)
 	}
 }
 
@@ -55,6 +66,8 @@ extension MIDIReceiver: InputStreamDelegate {
 
 extension MIDIReceiver: MessageDestination {
 	func takeMIDIMessages(_ messages: [Message]) {
-		print(#function, messages)
+		messages.compactMap(process).forEach {
+			continuation?.yield($0)
+		}
 	}
 }

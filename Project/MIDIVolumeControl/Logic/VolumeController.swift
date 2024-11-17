@@ -23,6 +23,7 @@ class VolumeController {
 	}
 	
 	var midiReceiver: MIDIReceiver?
+	var task: Task<Void, Never>?
 	
 	init(defaults: UserDefaults = .standard) {
 		self.defaults = defaults
@@ -33,9 +34,17 @@ class VolumeController {
 	
 	func configureStream() {
 		if configuration.enabled && midiReceiver == nil {
-			midiReceiver = .init()
-		} else if !configuration.enabled && midiReceiver != nil {
+			let receiver = MIDIReceiver()
+			task = Task {
+				for await value in receiver.values {
+					receiveValue(value)
+				}
+			}
+			midiReceiver = receiver
+		} else if !configuration.enabled {
 			midiReceiver = nil
+			task?.cancel()
+			task = nil
 		}
 	}
 	
