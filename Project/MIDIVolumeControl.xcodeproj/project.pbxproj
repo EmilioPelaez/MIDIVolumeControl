@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C85F02DD2CE8EBAF00479356 /* SnoizeMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; };
-		C85F02DE2CE8EBAF00479356 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C85F02DE2CE8EBAF00479356 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C85F02D62CE8EAD300479356 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C85F02F02CE9157D00479356 /* CGMath in Frameworks */ = {isa = PBXBuildFile; productRef = C85F02EF2CE9157D00479356 /* CGMath */; };
 		C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */; };
 /* End PBXBuildFile section */
