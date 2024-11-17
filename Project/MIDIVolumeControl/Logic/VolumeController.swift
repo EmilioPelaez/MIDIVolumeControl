@@ -22,6 +22,8 @@ class VolumeController {
 		}
 	}
 	
+	var midiReceiver: MIDIReceiver?
+	
 	init(defaults: UserDefaults = .standard) {
 		self.defaults = defaults
 		self.configuration = .init(from: defaults)
@@ -30,10 +32,10 @@ class VolumeController {
 	}
 	
 	func configureStream() {
-		if configuration.enabled {
-			//	Enable Stream
-		} else {
-			//	Disable Stream
+		if configuration.enabled && midiReceiver == nil {
+			midiReceiver = .init()
+		} else if !configuration.enabled && midiReceiver != nil {
+			midiReceiver = nil
 		}
 	}
 	
