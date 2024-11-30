@@ -21,6 +21,7 @@ class VolumeController {
 			configureStream()
 		}
 	}
+	private(set) var lastValue: Float?
 	
 	var midiReceiver: MIDIReceiver?
 	var task: Task<Void, Never>?
@@ -50,7 +51,9 @@ class VolumeController {
 	
 	func receiveValue(_ value: Int) {
 		let newVolume = convertValue(value)
+		Sound.output.isMuted = false
 		Sound.output.volume = newVolume
+		lastValue = newVolume
 	}
 	
 	func convertValue(_ value: Int) -> Float {

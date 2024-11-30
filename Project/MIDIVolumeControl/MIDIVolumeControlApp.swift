@@ -13,7 +13,7 @@ struct MIDIVolumeControlApp: App {
 	
 	var body: some Scene {
 		MenuBarExtra("MIDI Volume", systemImage: "slider.horizontal.2.square") {
-			ConfigurationEditor(configuration: $controller.configuration)
+			ConfigurationEditor(configuration: $controller.configuration, lastValue: controller.lastValue)
 		}
 	}
 }

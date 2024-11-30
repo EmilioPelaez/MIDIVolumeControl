@@ -9,6 +9,7 @@ import SwiftUI
 
 public struct ConfigurationEditor: View {
 	@Binding var configuration: VolumeController.Configuration
+	let lastValue: Float?
 	
 	public var body: some View {
 		Section("MIDI Volume Control") {
@@ -16,6 +17,11 @@ public struct ConfigurationEditor: View {
 		}
 		Section("Configuration") {
 			Stepper("Dead Zone: \(configuration.deadZone)", value: $configuration.deadZone, step: 3)
+			if let lastValue {
+					Text("Last Value ")
+					+ Text("\(lastValue.formatted(.number.precision(.fractionLength(2))))")
+						.fontDesign(.monospaced)
+			}
 		}
 		Button("Quit") {
 			NSApplication.shared.terminate(nil)
@@ -26,6 +32,6 @@ public struct ConfigurationEditor: View {
 
 #Preview {
 	@Previewable @State var configuration: VolumeController.Configuration = .init()
-	ConfigurationEditor(configuration: $configuration)
+	ConfigurationEditor(configuration: $configuration, lastValue: 0.5)
 		.padding()
 }
