@@ -63,6 +63,7 @@ class VolumeController {
 		guard min < max else { return 0 }
 		let remapped = Float(value).remap(from: (min, max), to: (0, 1))
 		let clamped = remapped.clamped()
-		return clamped
+		let adjusted = configuration.curve.function(clamped)
+		return adjusted
 	}
 }

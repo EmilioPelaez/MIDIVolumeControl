@@ -1,5 +1,5 @@
 {
-  "originHash" : "51fcc6b8d62fb05376fd6c47906c51160f4b26eb2ab3f8d8eb0fcc15d2f019fd",
+  "originHash" : "5ac035ddf6b6d37281983dae6748a7450b2c4183e169a24c6affcf21240c55c1",
   "pins" : [
     {
       "identity" : "cgmath",
@@ -11,12 +11,30 @@
       }
     },
     {
+      "identity" : "easing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/manuelCarlos/Easing",
+      "state" : {
+        "revision" : "f9317aee6f52e0ece0a8f866a857e8440e850b63",
+        "version" : "2.2.1"
+      }
+    },
+    {
       "identity" : "issoundadditions",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/InerziaSoft/ISSoundAdditions",
       "state" : {
         "revision" : "4b555f0354e6c280917bae8a598a258efe87ab98",
         "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
       }
     }
   ],

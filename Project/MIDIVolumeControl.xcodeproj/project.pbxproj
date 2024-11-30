@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C85883A82CFAA0660063AFB6 /* SnoizeMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85883A72CFAA0630063AFB6 /* SnoizeMIDI.framework */; };
 		C85883A92CFAA0660063AFB6 /* SnoizeMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C85883A72CFAA0630063AFB6 /* SnoizeMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C85883AD2CFAA1F80063AFB6 /* Easing in Frameworks */ = {isa = PBXBuildFile; productRef = C85883AC2CFAA1F80063AFB6 /* Easing */; };
 		C85F02F02CE9157D00479356 /* CGMath in Frameworks */ = {isa = PBXBuildFile; productRef = C85F02EF2CE9157D00479356 /* CGMath */; };
 		C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85883A82CFAA0660063AFB6 /* SnoizeMIDI.framework in Frameworks */,
+				C85883AD2CFAA1F80063AFB6 /* Easing in Frameworks */,
 				C85F02F02CE9157D00479356 /* CGMath in Frameworks */,
 				C8EA84F22CE6CBD600B0F2C4 /* ISSoundAdditions in Frameworks */,
 			);
@@ -150,6 +152,7 @@
 			packageProductDependencies = (
 				C8EA84F12CE6CBD600B0F2C4 /* ISSoundAdditions */,
 				C85F02EF2CE9157D00479356 /* CGMath */,
+				C85883AC2CFAA1F80063AFB6 /* Easing */,
 			);
 			productName = MIDIVolumeControl;
 			productReference = C8EA84D42CE6CAEB00B0F2C4 /* MIDIVolumeControl.app */;
@@ -182,6 +185,7 @@
 			packageReferences = (
 				C8EA84F02CE6CBD600B0F2C4 /* XCRemoteSwiftPackageReference "ISSoundAdditions" */,
 				C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */,
+				C85883AB2CFAA1F80063AFB6 /* XCRemoteSwiftPackageReference "Easing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C8EA84D52CE6CAEB00B0F2C4 /* Products */;
@@ -438,6 +442,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C85883AB2CFAA1F80063AFB6 /* XCRemoteSwiftPackageReference "Easing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/manuelCarlos/Easing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
 		C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/EmilioPelaez/CGMath";
@@ -457,6 +469,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C85883AC2CFAA1F80063AFB6 /* Easing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C85883AB2CFAA1F80063AFB6 /* XCRemoteSwiftPackageReference "Easing" */;
+			productName = Easing;
+		};
 		C85F02EF2CE9157D00479356 /* CGMath */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C85F02EE2CE9157D00479356 /* XCRemoteSwiftPackageReference "CGMath" */;
